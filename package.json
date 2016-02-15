@@ -1,0 +1,30 @@
+{
+  "name": "swap",
+  "version": "1.0.0",
+  "description": "Exchange rates library for NodeJS",
+  "main": "swap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tajawal/swap.git"
+  },
+  "keywords": [
+    "excahnge rates",
+    "currency conversion",
+    "multi provider"
+  ],
+  "author": "Muhammad Khurrum Qureshi <khurrum.qureshi@tajawal.com> (https://www.tajawal.com)",
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/tajawal/swap/blob/master/LICENSE"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/tajawal/swap/issues"
+  },
+  "homepage": "https://github.com/tajawal/swap#readme"
+}
