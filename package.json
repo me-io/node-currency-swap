@@ -2,7 +2,7 @@
   "name": "swap",
   "version": "1.0.0",
   "description": "Exchange rates library for NodeJS",
-  "main": "swap.js",
+  "main": "./lib/swap.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -26,5 +26,9 @@
   "bugs": {
     "url": "https://github.com/tajawal/swap/issues"
   },
-  "homepage": "https://github.com/tajawal/swap#readme"
+  "homepage": "https://github.com/tajawal/swap#readme",
+  "dependencies": {
+    "lodash": "^4.3.0",
+    "memory-cache": "^0.1.4"
+  }
 }
