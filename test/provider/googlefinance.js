@@ -8,7 +8,7 @@
 
 var assert = require('chai').assert;
 var CurrencyPair = require('../../lib/model/currencypair');
-var GoogleFinanceProvider = require('../../lib/provider/googlefinanceprovider');
+var GoogleFinanceProvider = require('../../lib/provider/googlefinance');
 
 describe('google finance provider', function () {
     it('it_throws_an_exception_when_rate_not_supported_sync', function () {
