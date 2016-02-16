@@ -4,7 +4,7 @@
   "description": "Exchange rates library for NodeJS",
   "main": "./lib/swap.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha --reporter spec 'test/**/*.js'"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,15 @@
   },
   "homepage": "https://github.com/tajawal/swap#readme",
   "dependencies": {
+    "cheerio": "^0.20.0",
     "lodash": "^4.3.0",
-    "memory-cache": "^0.1.4"
+    "memory-cache": "^0.1.4",
+    "sprintf-js": "^1.0.3",
+    "sync-request": "^3.0.0",
+    "then-request": "^2.1.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
   }
 }
