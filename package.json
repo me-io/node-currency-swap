@@ -28,12 +28,14 @@
   },
   "homepage": "https://github.com/tajawal/swap#readme",
   "dependencies": {
+    "async": "^1.5.2",
     "cheerio": "^0.20.0",
     "lodash": "^4.3.0",
     "memory-cache": "^0.1.4",
     "sprintf-js": "^1.0.3",
     "sync-request": "^3.0.0",
-    "then-request": "^2.1.1"
+    "then-request": "^2.1.1",
+    "xmldoc": "^0.4.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
