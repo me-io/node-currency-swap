@@ -39,6 +39,12 @@ describe('swap', function () {
         assert.isAbove(length, 0);
     });
 
+    it('it_throws_an_exception_when_same_provider_added', function () {
+        assert.throw(function () {
+            swap.addProvider(new swap.providers.GoogleFinance());
+        }, Error, 'Provider already added in the list');
+    });
+
     it('it_fetch_rate_sync', function () {
         var rate = swap.quoteSync({currency: 'USD/AED'});
         assert.isAbove(rate.length, 0);
