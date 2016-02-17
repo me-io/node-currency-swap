@@ -4,7 +4,7 @@
   "description": "Exchange rates library for NodeJS",
   "main": "./lib/swap.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec 'test/**/*.js'"
+    "test": "./node_modules/.bin/mocha --reporter spec -t 4000 'test/**/*.js'"
   },
   "repository": {
     "type": "git",
