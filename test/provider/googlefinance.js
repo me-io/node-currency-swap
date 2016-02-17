@@ -9,6 +9,7 @@
 var assert = require('chai').assert;
 var CurrencyPair = require('../../lib/model/currencypair');
 var GoogleFinanceProvider = require('../../lib/provider/googlefinance');
+var UnsupportedCurrencyPairException = require('../../lib/error/UnsupportedCurrencyPairException');
 
 describe('google finance provider', function () {
     it('it_throws_an_exception_when_rate_not_supported_sync', function () {
@@ -17,7 +18,7 @@ describe('google finance provider', function () {
 
         assert.throw(function () {
             provider.fetchRateSync(currencyPair);
-        }, Error, 'The currency is not supported or Google changed the response format')
+        }, UnsupportedCurrencyPairException, 'The currency pair "USD/XXL" is not supported or "Google Finance" changed the response format')
     });
 
     it('it_fetches_a_rate_sync', function () {
@@ -34,7 +35,7 @@ describe('google finance provider', function () {
         provider.fetchRate(currencyPair, function (err, rate) {
             assert.throw(function () {
                 throw err;
-            }, Error, 'The currency is not supported or Google changed the response format');
+            }, UnsupportedCurrencyPairException, 'The currency pair "USD/XXL" is not supported or "Google Finance" changed the response format');
             done();
         });
     });

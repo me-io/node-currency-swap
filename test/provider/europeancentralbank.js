@@ -9,6 +9,7 @@
 var assert = require('chai').assert;
 var CurrencyPair = require('../../lib/model/currencypair');
 var EuropeanCentralBankProvider = require('../../lib/provider/europeancentralbank');
+var UnsupportedCurrencyPairException = require('../../lib/error/UnsupportedCurrencyPairException');
 
 describe('european cental bank provider', function () {
     it('it_throws_an_exception_when_base_rate_is_not_EUR_sync', function () {
@@ -17,16 +18,16 @@ describe('european cental bank provider', function () {
 
         assert.throw(function () {
             provider.fetchRateSync(currencyPair);
-        }, Error, 'The currency pair "USD/AED" is not supported by European Central Bank')
+        }, UnsupportedCurrencyPairException, 'The currency pair "USD/AED" is not supported or "European Central Bank" changed the response format')
     });
 
-    it('it_throws_an_exception_when_rate_not_supported', function () {
+    it('it_throws_an_exception_when_rate_not_supported_sync', function () {
         var provider = new EuropeanCentralBankProvider();
         var currencyPair = new CurrencyPair('EUR/AED');
 
         assert.throw(function () {
             provider.fetchRateSync(currencyPair);
-        }, Error, 'The currency pair "EUR/AED" is not supported by European Central Bank')
+        }, UnsupportedCurrencyPairException, 'The currency pair "EUR/AED" is not supported or "European Central Bank" changed the response format')
     });
 
     it('it_fetches_a_rate_sync', function () {
@@ -43,7 +44,7 @@ describe('european cental bank provider', function () {
         provider.fetchRate(currencyPair, function (err, rate) {
             assert.throw(function () {
                 throw err;
-            }, Error, 'The currency pair "USD/AED" is not supported by European Central Bank');
+            }, UnsupportedCurrencyPairException, 'The currency pair "USD/AED" is not supported or "European Central Bank" changed the response format');
             done();
         });
     });
@@ -55,7 +56,7 @@ describe('european cental bank provider', function () {
         provider.fetchRate(currencyPair, function (err, rate) {
             assert.throw(function () {
                 throw err;
-            }, Error, 'The currency pair "EUR/AED" is not supported by European Central Bank');
+            }, UnsupportedCurrencyPairException, 'The currency pair "EUR/AED" is not supported or "European Central Bank" changed the response format');
             done();
         });
     });
