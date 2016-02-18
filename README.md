@@ -47,7 +47,7 @@ To retrieve the latest exchange rate for a currency pair asynchronously.
 
 __Arguments__
 
-* `options` - An object to specify options for quote. For complete list refer [Options Section](#Options).
+* `options` - An object to specify options for quote. For complete list refer [Options Section](#options).
 * `callback(err, rate)` - A callback which returns error on any failure or rate array on success.
 
 ### quoteSync(options)
@@ -56,7 +56,7 @@ To retrieve the latest exchange rate for a currency pair synchronously.
 
 __Arguments__
 
-* `options` - An object to specify options for quote. For complete list refer [Options Section](#Options).
+* `options` - An object to specify options for quote. For complete list refer [Options Section](#options).
 
 ### Examples
 
@@ -170,6 +170,11 @@ swap.addProvider(new swap.providers.OpenExchangeRates(appId, enterprise));
 - [Xignite](https://www.xignite.com)
 You must have access to the `XigniteGlobalCurrencies` API.
 Supports multiple currencies as base and quote currencies.
+```js
+// Api token from Xignite
+
+swap.addProvider(new swap.providers.Xignite(token));
+```
 - [Yahoo Finance](https://finance.yahoo.com/)
 Supports multiple currencies as base and quote currencies.
 ```js
