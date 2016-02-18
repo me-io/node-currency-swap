@@ -47,7 +47,7 @@ To retrieve the latest exchange rate for a currency pair asynchronously.
 
 __Arguments__
 
-* `options` - An object to specify options for quote. For complete list of options refer [Options Section](##Options).
+* `options` - An object to specify options for quote. For complete list refer [Options Section](#Options).
 * `callback(err, rate)` - A callback which returns error on any failure or rate array on success.
 
 ### quoteSync(options)
@@ -56,7 +56,7 @@ To retrieve the latest exchange rate for a currency pair synchronously.
 
 __Arguments__
 
-* `options` - An object to specify options for quote. For complete list of options refer [Options Section](##Options).
+* `options` - An object to specify options for quote. For complete list refer [Options Section](#Options).
 
 ### Examples
 
