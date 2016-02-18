@@ -180,8 +180,6 @@ Supports multiple currencies as base and quote currencies.
 ```js
 swap.addProvider(new swap.providers.YahooFinance());
 ```
-- [WebserviceX](http://www.webservicex.net/ws/default.aspx)
-Supports multiple currencies as base and quote currencies.
 - [National Bank of Romania](http://www.bnr.ro)
 Supports only RON as base currency.
 ```js
