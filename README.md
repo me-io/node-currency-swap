@@ -140,7 +140,12 @@ console.log(rate.provider);
 Swap provides an object of currency codes so you can use it to avoid typos.
 
 ```js
-var rates = swap.quoteSync({currency: {baseCurrency: swap.currencyCodes.ISO_USD, quoteCurrency: swap.currencyCodes.ISO_AED}});
+var rates = swap.quoteSync({
+    currency: {
+            baseCurrency: swap.currencyCodes.ISO_USD, 
+            quoteCurrency: swap.currencyCodes.ISO_AED
+        }
+    });
 ```
 
 ## Providers
