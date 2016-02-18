@@ -152,19 +152,36 @@ var rates = swap.quoteSync({
 
 - [European Central Bank](http://www.ecb.europa.eu/home/html/index.en.html)
 Supports only EUR as base currency.
+```js
+swap.addProvider(new swap.providers.EuropeanCentralBank());
+```
 - [Google Finance](http://www.google.com/finance)
 Supports multiple currencies as base and quote currencies.
+```js
+swap.addProvider(new swap.providers.GoogleFinance());
+```
 - [Open Exchange Rates](https://openexchangerates.org)
 Supports only USD as base currency for the free version and multiple ones for the enterprise version.
+```js
+// appId from open exchange rate. enterprise in case you have enterprise account (default `false`)
+
+swap.addProvider(new swap.providers.OpenExchangeRates(appId, enterprise));
+```
 - [Xignite](https://www.xignite.com)
 You must have access to the `XigniteGlobalCurrencies` API.
 Supports multiple currencies as base and quote currencies.
 - [Yahoo Finance](https://finance.yahoo.com/)
 Supports multiple currencies as base and quote currencies.
+```js
+swap.addProvider(new swap.providers.YahooFinance());
+```
 - [WebserviceX](http://www.webservicex.net/ws/default.aspx)
 Supports multiple currencies as base and quote currencies.
 - [National Bank of Romania](http://www.bnr.ro)
 Supports only RON as base currency.
+```js
+swap.addProvider(new swap.providers.NationalBankOfRomania());
+```
 
 ## Copyright and license
 
