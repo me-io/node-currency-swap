@@ -1,5 +1,5 @@
 {
-  "name": "swap",
+  "name": "node-swap",
   "version": "1.0.0",
   "description": "Exchange rates library for NodeJS",
   "main": "./lib/swap.js",

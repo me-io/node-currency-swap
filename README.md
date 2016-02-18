@@ -14,7 +14,7 @@ npm install swap
 First, you need to add a provider to swap by using addProvider() method
 
 ```js
-var swap = require('swap');
+var swap = require('node-swap');
 
 // Add the google finance provider 
 swap.addProvider(new swap.providers.GoogleFinance());
@@ -23,7 +23,7 @@ swap.addProvider(new swap.providers.GoogleFinance());
 You can also add multiple providers
 
 ```js
-var swap = require('swap');
+var swap = require('node-swap');
 
 // Add the google finance provider 
 swap.addProvider(new swap.providers.GoogleFinance());
