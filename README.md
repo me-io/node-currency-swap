@@ -47,7 +47,7 @@ To retrieve the latest exchange rate for a currency pair asynchronously.
 
 __Arguments__
 
-* `options` - An object to specify options for quote. For complete list of options refer options section below.
+* `options` - An object to specify options for quote. For complete list of options refer [Options Section](##Options).
 * `callback(err, rate)` - A callback which returns error on any failure or rate array on success.
 
 ### quoteSync(options)
@@ -56,14 +56,7 @@ To retrieve the latest exchange rate for a currency pair synchronously.
 
 __Arguments__
 
-* `options` - An object to specify options for quote. For complete list of options refer options section below.
-
-### Options
-
-* `currency` - currency info to get exchange rate either as string `USD/AED` or as object `{baseCurrency:'USD', quoteCurrency:'AED'}`.
-* `fetchMultipleRate` - if true, fetch rate from all the added providers. (default: `false`)
-* `cache` - if true, it tries to fetch rate from cache if available otherwise fetch rate from added provider and store it in cache. (default: `false`)
-* `ttl` - time in `ms` to retain rate in cache. (default: `360000`) 1 hour
+* `options` - An object to specify options for quote. For complete list of options refer [Options Section](##Options).
 
 ### Examples
 
@@ -147,6 +140,13 @@ var rates = swap.quoteSync({
         }
     });
 ```
+
+## Options
+
+- `currency` - currency info to get exchange rate either as string `USD/AED` or as object `{baseCurrency:'USD', quoteCurrency:'AED'}`.
+- `fetchMultipleRate` - if true, fetch rate from all the added providers. (default: `false`)
+- `cache` - if true, it tries to fetch rate from cache if available otherwise fetch rate from added provider and store it in cache. (default: `false`)
+- `ttl` - time in `ms` to retain rate in cache. (default: `360000`) 1 hour
 
 ## Providers
 
