@@ -81,7 +81,7 @@ swap.quote({currency: 'USD/SAR'}, function (err, rate) {
 });
 ```
 
-Synchronously
+Synchronously in case of any error it throws an error which you should handle through try/catch
 
 ```js
 // if there is single provider in the list it fetch the rate from that provider but if there are multiple provider in the list it fetch the rate from first available one.
@@ -115,8 +115,51 @@ console.log(rate.provider);
 });
 ```
 
+To fetch rate from cache if available if not it fetch the rate from provider and store in cache
+
+```js
+var rates = swap.quoteSync({currency: 'USD/SAR', cache: true});
+
+rates.forEach(function(rate){
+// print the exchange rate
+console.log(rate.value);
+    
+// print the date from the provider
+console.log(rate.date);
+    
+// print the provider name
+console.log(rate.provider);
+
+});
+```
 
 > Currencies are expressed as their [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217) code.
+
+### swap.currencyCodes
+
+Swap provides an object of currency codes so you can use it to avoid typos.
+
+```js
+var rates = swap.quoteSync({currency: {baseCurrency: swap.currencyCodes.ISO_USD, quoteCurrency: swap.currencyCodes.ISO_AED}});
+```
+
+## Providers
+
+- [European Central Bank](http://www.ecb.europa.eu/home/html/index.en.html)
+Supports only EUR as base currency.
+- [Google Finance](http://www.google.com/finance)
+Supports multiple currencies as base and quote currencies.
+- [Open Exchange Rates](https://openexchangerates.org)
+Supports only USD as base currency for the free version and multiple ones for the enterprise version.
+- [Xignite](https://www.xignite.com)
+You must have access to the `XigniteGlobalCurrencies` API.
+Supports multiple currencies as base and quote currencies.
+- [Yahoo Finance](https://finance.yahoo.com/)
+Supports multiple currencies as base and quote currencies.
+- [WebserviceX](http://www.webservicex.net/ws/default.aspx)
+Supports multiple currencies as base and quote currencies.
+- [National Bank of Romania](http://www.bnr.ro)
+Supports only RON as base currency.
 
 ## Copyright and license
 
