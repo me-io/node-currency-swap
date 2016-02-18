@@ -2,12 +2,12 @@
 Exchange rates library for nodejs
 
 ## Motivation
-Swap is designed to be a simple and universal exchange rate library with support fo multiple providers. This library is heavily inspired from [PHP Swap](https://github.com/florianv/swap)
+Swap is designed to be a simple and universal exchange rate library with support for multiple providers. This library is heavily inspired from [PHP Swap](https://github.com/florianv/swap)
 
 ## Installation
 
 ```bashp
-npm install swap
+npm install node-swap
 ```
 ## Usage
 
