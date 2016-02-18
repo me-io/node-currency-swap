@@ -2,33 +2,33 @@
 Exchange rates library for nodejs
 
 ## Motivation
-Swap is designed to be a simple and universal exchange rate library with support for multiple providers. This library is heavily inspired from [PHP Swap](https://github.com/florianv/swap)
+node-currency-swap is designed to be a simple and universal exchange rate library with support for multiple providers. This library is heavily inspired from [PHP Swap](https://github.com/florianv/swap)
 
 ## Installation
 
 ```bashp
-npm install node-swap
+npm install node-currency-swap
 ```
 ## Usage
 
 First, you need to add a provider to swap by using addProvider() method
 
 ```js
-var swap = require('node-swap');
+var swap = require('node-currency-swap');
 
-// Add the google finance provider 
+// Add the google finance provider
 swap.addProvider(new swap.providers.GoogleFinance());
 ```
 
 You can also add multiple providers
 
 ```js
-var swap = require('node-swap');
+var swap = require('node-currency-swap');
 
-// Add the google finance provider 
+// Add the google finance provider
 swap.addProvider(new swap.providers.GoogleFinance());
 
-// Add the yahoo finance provider 
+// Add the yahoo finance provider
 swap.addProvider(new swap.providers.YahooFinance());
 ```
 
@@ -65,10 +65,10 @@ __Arguments__
 swap.quote({currency: 'USD/SAR'}, function (err, rate) {
     // print the exchange rate
     console.log(rate[0].value);
-    
+
     // print the date from the provider
     console.log(rate[0].date);
-    
+
     // print the provider name
     console.log(rate[0].provider);
 });
@@ -82,10 +82,10 @@ var rate = swap.quoteSync({currency: 'USD/SAR'});
 
 // print the exchange rate
 console.log(rate[0].value);
-    
+
 // print the date from the provider
 console.log(rate[0].date);
-    
+
 // print the provider name
 console.log(rate[0].provider);
 ```
@@ -98,10 +98,10 @@ var rates = swap.quoteSync({currency: 'USD/SAR', fetchMultipleRate: true});
 rates.forEach(function(rate){
 // print the exchange rate
 console.log(rate.value);
-    
+
 // print the date from the provider
 console.log(rate.date);
-    
+
 // print the provider name
 console.log(rate.provider);
 
@@ -116,10 +116,10 @@ var rates = swap.quoteSync({currency: 'USD/SAR', cache: true});
 rates.forEach(function(rate){
 // print the exchange rate
 console.log(rate.value);
-    
+
 // print the date from the provider
 console.log(rate.date);
-    
+
 // print the provider name
 console.log(rate.provider);
 
@@ -135,7 +135,7 @@ Swap provides an object of currency codes so you can use it to avoid typos.
 ```js
 var rates = swap.quoteSync({
     currency: {
-            baseCurrency: swap.currencyCodes.ISO_USD, 
+            baseCurrency: swap.currencyCodes.ISO_USD,
             quoteCurrency: swap.currencyCodes.ISO_AED
         }
     });
@@ -188,4 +188,4 @@ swap.addProvider(new swap.providers.NationalBankOfRomania());
 
 ## Copyright and license
 
-Code released under the [MIT license](https://github.com/tajawal/swap/blob/master/LICENSE)
+Code released under the [Apache Software License v2.0](http://www.apache.org/licenses/LICENSE-2.0)

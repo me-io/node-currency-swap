@@ -1,32 +1,55 @@
 {
-  "name": "node-swap",
-  "version": "1.0.1",
+  "name": "node-currency-swap",
   "description": "Exchange rates library for NodeJS",
-  "main": "./lib/swap.js",
-  "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec -t 4000 'test/**/*.js'"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tajawal/swap.git"
-  },
+  "version": "1.0.2",
   "keywords": [
+    "currency",
+    "swap",
+    "rates",
+    "exchange",
+    "currency switcher",
+    "node currency",
+    "currency exchange",
     "excahnge rates",
     "currency conversion",
     "multi provider"
   ],
-  "author": "Muhammad Khurrum Qureshi <khurrum.qureshi@tajawal.com> (https://www.tajawal.com)",
-  "license": "MIT",
-  "licenses": [
+  "maintainers": [
     {
-      "type": "MIT",
-      "url": "https://github.com/tajawal/swap/blob/master/LICENSE"
+      "name": "Mohamed Meabed",
+      "email": "meabed@tajaawal.com",
+      "web": "http://www.tajawal.com"
+    },
+    {
+      "name": "Muhammad Khurrum Qureshi",
+      "email": "khurrum.qureshi@tajawal.com",
+      "web": "http://www.tajawal.com"
     }
   ],
   "bugs": {
-    "url": "https://github.com/tajawal/swap/issues"
+    "web": "https://github.com/tajawal/node-currency-swap/issues"
   },
-  "homepage": "https://github.com/tajawal/swap#readme",
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/tajawal/node-currency-swap.git"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "Apache Software License v2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "homepage": "http://tech.tajawal.com/node-currency-swap",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "main": "./lib/node-currency-swap.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec -t 10000 'test/**/*.js'",
+    "test-travis": "./node_modules/.bin/mocha --reporter spec -t 10000 'test/**/*.js'"
+  },
   "dependencies": {
     "async": "^1.5.2",
     "cheerio": "^0.20.0",
