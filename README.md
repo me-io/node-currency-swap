@@ -163,7 +163,7 @@ swap.addProvider(new swap.providers.GoogleFinance());
 - [Open Exchange Rates](https://openexchangerates.org)
 Supports only USD as base currency for the free version and multiple ones for the enterprise version.
 ```js
-// appId from open exchange rate. enterprise in case you have enterprise account (default `false`)
+// appId from open exchange rate. true in case you have enterprise account (default `false`)
 
 swap.addProvider(new swap.providers.OpenExchangeRates(appId, enterprise));
 ```
