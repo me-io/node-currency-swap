@@ -29,7 +29,7 @@ var swap = require('node-currency-swap');
 // Add the google finance provider
 swap.addProvider(new swap.providers.GoogleFinance());
 
-// Add the yahoo finance provider with request timeout option
+// Add the yahoo finance provider with request timeout option in ms
 swap.addProvider(new swap.providers.YahooFinance({timeout: 2000}));
 
 ```
