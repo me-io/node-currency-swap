@@ -8,7 +8,9 @@ node_js:
   - "4.2"
   - "5.5"
 sudo: false
+before_install:
+  - pip install codecov
 script:
   - "npm run-script test-travis"
-after_script:
-  - "npm install coveralls@2 && cat ./coverage/lcov.info | coveralls"
+after_success:
+  - codecov

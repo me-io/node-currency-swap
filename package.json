@@ -62,6 +62,8 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^2.4.5"
+    "coveralls": "^2.11.6",
+    "mocha": "^2.4.5",
+    "codecov.io": "^0.1.6"
   }
 }
