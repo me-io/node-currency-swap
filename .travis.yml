@@ -6,9 +6,9 @@ node_js:
   - "3.3"
   - "4.2"
   - "5.5"
-sudo: false
+sudo: true
 before_install:
-  - pip install codecov
+  - sudo pip install codecov
 script:
   - "npm run-script test-travis"
 after_success:
