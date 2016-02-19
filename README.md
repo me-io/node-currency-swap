@@ -1,5 +1,5 @@
-# swap
-Exchange rates library for nodejs
+# node-currency-swap
+Currency Exchange Rates library for nodejs
 
 ## Motivation
 node-currency-swap is designed to be a simple and universal exchange rate library with support for multiple providers. This library is heavily inspired from [PHP Swap](https://github.com/florianv/swap)
