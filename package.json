@@ -1,7 +1,7 @@
 {
   "name": "node-currency-swap",
   "description": "Exchange rates library for NodeJS",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "keywords": [
     "currency",
     "swap",
