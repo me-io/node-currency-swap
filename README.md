@@ -9,6 +9,7 @@ node-currency-swap is designed to be a simple and universal exchange rate librar
 ```bashp
 npm install node-currency-swap
 ```
+
 ## Usage
 
 First, you need to add a provider to swap by using addProvider() method
@@ -28,8 +29,14 @@ var swap = require('node-currency-swap');
 // Add the google finance provider
 swap.addProvider(new swap.providers.GoogleFinance());
 
+// Add Xignite provider
+swap.addProvider(new swap.providers.Xignite());
+
 // Add the yahoo finance provider
-swap.addProvider(new swap.providers.YahooFinance());
+var provider = new swap.providers.YahooFinance();
+// request timeout provider
+provider.setRequestOptions({timeout: 10000});
+
 ```
 
 ### swap.providers
@@ -63,14 +70,14 @@ __Arguments__
 ```js
 // if there is single provider in the list it fetch the rate from that provider but if there are multiple provider in the list it fetch the rate from first available one.
 swap.quote({currency: 'USD/SAR'}, function (err, rate) {
-    // print the exchange rate
-    console.log(rate[0].value);
+// print the exchange rate
+console.log(rate[0].value);
 
-    // print the date from the provider
-    console.log(rate[0].date);
+// print the date from the provider
+console.log(rate[0].date);
 
-    // print the provider name
-    console.log(rate[0].provider);
+// print the provider name
+console.log(rate[0].provider);
 });
 ```
 

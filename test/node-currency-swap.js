@@ -36,7 +36,7 @@ describe('node-currency-swap', function () {
 
   it('it_add_provider_and_request_timeout', function () {
     var provider = new swap.providers.GoogleFinance();
-    // request timeoute privider
+    // request timeout provider
     provider.setRequestOptions({timeout: 10000});
     var length = swap.addProvider(provider);
     assert.isAbove(length, 0);
