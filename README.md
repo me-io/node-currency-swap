@@ -155,41 +155,41 @@ var rates = swap.quoteSync({
 - [European Central Bank](http://www.ecb.europa.eu/home/html/index.en.html)
 Supports only EUR as base currency.
 ```js
-// options.timeout in ms `(optional)` To set request timeout default `3000ms`
+// options.timeout in ms (optional) To set request timeout default (default: 3000ms)
 swap.addProvider(new swap.providers.EuropeanCentralBank(options));
 ```
 - [Google Finance](http://www.google.com/finance)
 Supports multiple currencies as base and quote currencies.
 ```js
-// options.timeout in ms `(optional)` To set request timeout default `3000ms`
+// options.timeout in ms (optional) To set request timeout (default: 3000ms)
 swap.addProvider(new swap.providers.GoogleFinance(options));
 ```
 - [Open Exchange Rates](https://openexchangerates.org)
 Supports only USD as base currency for the free version and multiple ones for the enterprise version.
 ```js
-// options.appId `(required)` API key from open exchange rates
-// options.enterprise `(optional)` true in case you have enterprise account (default `false`)
-// options.timeout in ms `(optional)` To set request timeout default `3000ms`
+// options.appId (required) API key from open exchange rates
+// options.enterprise (optional) true in case you have enterprise account (default: false)
+// options.timeout in ms (optional) To set request timeout (default: 3000ms)
 swap.addProvider(new swap.providers.OpenExchangeRates(options));
 ```
 - [Xignite](https://www.xignite.com)
 You must have access to the `XigniteGlobalCurrencies` API.
 Supports multiple currencies as base and quote currencies.
 ```js
-// options.token `(required)` API token from Xignite
-// options.timeout in ms `(optional)` To set request timeout default `3000ms`
+// options.token (required) API token from Xignite
+// options.timeout in ms (optional) To set request timeout (default: 3000ms)
 swap.addProvider(new swap.providers.Xignite(options));
 ```
 - [Yahoo Finance](https://finance.yahoo.com/)
 Supports multiple currencies as base and quote currencies.
 ```js
-// options.timeout in ms `(optional)` To set request timeout default `3000ms`
+// options.timeout in ms (optional) To set request timeout (default: 3000ms)
 swap.addProvider(new swap.providers.YahooFinance(options));
 ```
 - [National Bank of Romania](http://www.bnr.ro)
 Supports only RON as base currency.
 ```js
-// options.timeout in ms `(optional)` To set request timeout default `3000ms`
+// options.timeout in ms (optional) To set request timeout (default: 3000ms)
 swap.addProvider(new swap.providers.NationalBankOfRomania(options));
 ```
 
