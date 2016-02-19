@@ -29,13 +29,8 @@ var swap = require('node-currency-swap');
 // Add the google finance provider
 swap.addProvider(new swap.providers.GoogleFinance());
 
-// Add Xignite provider
-swap.addProvider(new swap.providers.Xignite());
-
-// Add the yahoo finance provider
-var provider = new swap.providers.YahooFinance();
-// request timeout provider
-provider.setRequestOptions({timeout: 10000});
+// Add the yahoo finance provider with request timeout option
+swap.addProvider(new swap.providers.YahooFinance({timeout: 2000}));
 
 ```
 
@@ -160,37 +155,42 @@ var rates = swap.quoteSync({
 - [European Central Bank](http://www.ecb.europa.eu/home/html/index.en.html)
 Supports only EUR as base currency.
 ```js
-swap.addProvider(new swap.providers.EuropeanCentralBank());
+// options.timeout in ms `(optional)` To set request timeout default `3000ms`
+swap.addProvider(new swap.providers.EuropeanCentralBank(options));
 ```
 - [Google Finance](http://www.google.com/finance)
 Supports multiple currencies as base and quote currencies.
 ```js
-swap.addProvider(new swap.providers.GoogleFinance());
+// options.timeout in ms `(optional)` To set request timeout default `3000ms`
+swap.addProvider(new swap.providers.GoogleFinance(options));
 ```
 - [Open Exchange Rates](https://openexchangerates.org)
 Supports only USD as base currency for the free version and multiple ones for the enterprise version.
 ```js
-// appId from open exchange rate. true in case you have enterprise account (default `false`)
-
-swap.addProvider(new swap.providers.OpenExchangeRates(appId, enterprise));
+// options.appId `(required)` API key from open exchange rates
+// options.enterprise `(optional)` true in case you have enterprise account (default `false`)
+// options.timeout in ms `(optional)` To set request timeout default `3000ms`
+swap.addProvider(new swap.providers.OpenExchangeRates(options));
 ```
 - [Xignite](https://www.xignite.com)
 You must have access to the `XigniteGlobalCurrencies` API.
 Supports multiple currencies as base and quote currencies.
 ```js
-// Api token from Xignite
-
-swap.addProvider(new swap.providers.Xignite(token));
+// options.token `(required)` API token from Xignite
+// options.timeout in ms `(optional)` To set request timeout default `3000ms`
+swap.addProvider(new swap.providers.Xignite(options));
 ```
 - [Yahoo Finance](https://finance.yahoo.com/)
 Supports multiple currencies as base and quote currencies.
 ```js
-swap.addProvider(new swap.providers.YahooFinance());
+// options.timeout in ms `(optional)` To set request timeout default `3000ms`
+swap.addProvider(new swap.providers.YahooFinance(options));
 ```
 - [National Bank of Romania](http://www.bnr.ro)
 Supports only RON as base currency.
 ```js
-swap.addProvider(new swap.providers.NationalBankOfRomania());
+// options.timeout in ms `(optional)` To set request timeout default `3000ms`
+swap.addProvider(new swap.providers.NationalBankOfRomania(options));
 ```
 
 ## Copyright and license

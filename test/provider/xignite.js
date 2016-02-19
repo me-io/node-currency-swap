@@ -20,7 +20,7 @@ describe('xignite provider', function () {
   });
 
   it('it_throws_an_exception_when_rate_not_supported_sync', function () {
-    var provider = new XigniteProvider(token);
+    var provider = new XigniteProvider({token: token});
     var currencyPair = new CurrencyPair('USD/XXL');
 
     assert.throw(function () {
@@ -30,14 +30,14 @@ describe('xignite provider', function () {
   });
 
   it('it_fetches_a_rate_sync', function () {
-    var provider = new XigniteProvider(token);
+    var provider = new XigniteProvider({token: token});
     var rate = provider.fetchRateSync(new CurrencyPair('USD/AED'));
     assert.isDefined(rate.getValue());
     assert.isDefined(rate.getDate());
   });
 
   it('it_throws_an_exception_when_rate_not_supported', function (done) {
-    var provider = new XigniteProvider(token);
+    var provider = new XigniteProvider({token: token});
     var currencyPair = new CurrencyPair('USD/XXL');
 
     provider.fetchRate(currencyPair, function (err, rate) {
@@ -50,7 +50,7 @@ describe('xignite provider', function () {
   });
 
   it('it_fetches_a_rate', function (done) {
-    var provider = new XigniteProvider(token);
+    var provider = new XigniteProvider({token: token});
     provider.fetchRate(new CurrencyPair('USD/AED'), function (err, rate) {
       assert.isDefined(rate.getValue());
       assert.isDefined(rate.getDate());
