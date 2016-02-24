@@ -13,6 +13,18 @@ var UnsupportedCurrencyPairException = require('../../lib/error/UnsupportedCurre
 var token = '72EB032658E24682A3C8D3BF37EA2A46';
 
 describe('xignite provider', function () {
+  before(function (done) {
+    var provider = new XigniteProvider({token: token});
+    provider.fetchRate(new CurrencyPair('USD/EUR'), function (err, rate) {
+      if(err){
+        return done(err);
+      }
+
+      done();
+
+    });
+  });
+
   it('it_throws_an_exception_when_appId_not provided', function () {
     assert.throw(function () {
       new XigniteProvider();
