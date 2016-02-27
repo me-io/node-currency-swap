@@ -195,7 +195,7 @@ swap.addProvider(new swap.providers.NationalBankOfRomania(options));
 - [Currency Layer](https://currencylayer.com/)
 Supports multiple currencies as base and quote currencies.
 ```js
-// options.accessKey (required) API access key from Currency Layer
+// options.accessKey (required) API access key from Currency Layer.
 // options.timeout in ms (optional) To set request timeout (default: 3000ms)
 swap.addProvider(new swap.providers.CurrencyLayer(options));
 ```
