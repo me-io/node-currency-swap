@@ -15,16 +15,16 @@
     "multi provider"
   ],
   "maintainers": [
-    "Mohamed Meabed <meabed@me.io> (http://www.tajawal.com)",
-    "Muhammad Khurrum Qureshi <khurrum.qureshi@tajawal.com> (http://www.tajawal.com)"
+    "Mohamed Meabed <meabed@me.io> (https://me.io)",
+    "Muhammad Khurrum Qureshi"
   ],
   "bugs": {
-    "url": "https://github.com/tajawal/node-currency-swap/issues"
+    "url": "https://github.com/me-io/node-currency-swap/issues"
   },
   "repositories": [
     {
       "type": "git",
-      "url": "git+https://github.com/tajawal/node-currency-swap.git"
+      "url": "git+https://github.com/me-io/node-currency-swap.git"
     }
   ],
   "licenses": [
@@ -33,7 +33,7 @@
       "url": "http://www.apache.org/licenses/LICENSE-2.0"
     }
   ],
-  "homepage": "http://tech.tajawal.com/node-currency-swap",
+  "homepage": "https://github.com/me-io/node-currency-swap",
   "engines": {
     "node": ">= 0.10.0"
   },
@@ -61,7 +61,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tajawal/node-currency-swap.git"
+    "url": "git+https://github.com/me-io/node-currency-swap.git"
   },
   "directories": {
     "lib": "lib",
