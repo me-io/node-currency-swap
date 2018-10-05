@@ -1,5 +1,5 @@
 {
-  "name": "@mmeio/node-currency-swap",
+  "name": "@meio/node-currency-swap",
   "description": "Exchange rates library for NodeJS",
   "version": "1.0.6",
   "keywords": [
@@ -15,24 +15,16 @@
     "multi provider"
   ],
   "maintainers": [
-    {
-      "name": "Mohamed Meabed",
-      "email": "meabed@me.io",
-      "web": "http://www.tajawal.com"
-    },
-    {
-      "name": "Muhammad Khurrum Qureshi",
-      "email": "khurrum.qureshi@tajawal.com",
-      "web": "http://www.tajawal.com"
-    }
+    "Mohamed Meabed <meabed@me.io> (http://www.tajawal.com)",
+    "Muhammad Khurrum Qureshi <khurrum.qureshi@tajawal.com> (http://www.tajawal.com)"
   ],
   "bugs": {
-    "web": "https://github.com/tajawal/node-currency-swap/issues"
+    "url": "https://github.com/tajawal/node-currency-swap/issues"
   },
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/tajawal/node-currency-swap.git"
+      "url": "git+https://github.com/tajawal/node-currency-swap.git"
     }
   ],
   "licenses": [
@@ -66,5 +58,15 @@
     "coveralls": "^3.0.2",
     "mocha": "^5.2.0",
     "codecov.io": "^0.1.6"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tajawal/node-currency-swap.git"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "author": "",
+  "license": "MIT"
 }

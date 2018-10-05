@@ -1,13 +1,10 @@
 # node-currency-swap
 Currency Exchange Rates library for nodejs
 
-## Motivation
-node-currency-swap is designed to be a simple and universal exchange rate library with support for multiple providers. This library is heavily inspired from [PHP Swap](https://github.com/florianv/swap)
-
 ## Installation
 
 ```bashp
-npm install node-currency-swap
+npm install @meio/node-currency-swap
 ```
 
 ## Usage
@@ -200,6 +197,8 @@ Supports multiple currencies as base and quote currencies.
 swap.addProvider(new swap.providers.CurrencyLayer(options));
 ```
 
-## Copyright and license
+#### Credits
+> node-currency-swap is designed to be a simple and universal exchange rate library with support for multiple providers. This library is heavily inspired from [PHP Swap](https://github.com/florianv/swap)
 
+## Copyright and license
 Code released under the [Apache Software License v2.0](http://www.apache.org/licenses/LICENSE-2.0)
