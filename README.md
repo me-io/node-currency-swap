@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/me-io/node-currency-swap.svg?branch=master)](https://travis-ci.org/me-io/node-currency-swap)
+
 # node-currency-swap
 Currency Exchange Rates library for nodejs
 
@@ -200,5 +202,5 @@ swap.addProvider(new swap.providers.CurrencyLayer(options));
 #### Credits
 > node-currency-swap is designed to be a simple and universal exchange rate library with support for multiple providers. This library is heavily inspired from [PHP Swap](https://github.com/florianv/swap)
 
-## Copyright and license
-Code released under the [Apache Software License v2.0](http://www.apache.org/licenses/LICENSE-2.0)
+## License
+The code is available under the [MIT license](LICENSE.md).
